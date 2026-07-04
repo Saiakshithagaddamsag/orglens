@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Orglens \u2014 Salesforce Analysis (Read-only)",
+  "version": "1.0.0",
+  "description": "Deterministic, read-only Salesforce analysis: Impact, Permissions, Flow docs, Execution, Sharing, Configuration. Evidence-first. Never modifies the org.",
+  "minimum_chrome_version": "110",
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "declarativeContent"
+  ],
+  "host_permissions": [
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*",
+    "https://*.salesforce-setup.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Orglens",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

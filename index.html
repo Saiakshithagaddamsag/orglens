@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orglens</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="home-btn" id="homeBtn" title="Open Salesforce Home" target="_blank" rel="noopener"><span class="home-ico">⌂</span> Salesforce Home</a>
+    <div class="brand">Orglens</div>
+    <div class="crumb-inline" id="crumbInline"></div>
+    <div class="spacer"></div>
+    <div class="avatar" id="whoAvatar"></div>
+  </div>
+</div>
+
+<div class="page">
+  <div id="connLine" hidden></div>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab" data-mod="impact"><span class="tab-title">Impact Analyzer</span><span class="tab-sub">what depends on this?</span></button>
+    <button class="tab" data-mod="permissions"><span class="tab-title">Permission Overlay</span><span class="tab-sub">who can do this?</span></button>
+    <button class="tab" data-mod="flowdocs"><span class="tab-title">Flow Analyzer</span><span class="tab-sub">how does this flow work?</span></button>
+    <button class="tab" data-mod="execution"><span class="tab-title">Execution Explorer</span><span class="tab-sub">when can automation run?</span></button>
+    <button class="tab" data-mod="sharing"><span class="tab-title">Sharing Explorer</span><span class="tab-sub">why does this user have access?</span></button>
+    <button class="tab" data-mod="configuration"><span class="tab-title">Configuration Explorer</span><span class="tab-sub">where is this configured?</span></button>
+  </nav>
+
+  <!-- Shared shell: every module renders into the same regions. No module invents its own layout. -->
+  <section class="shell-search" id="regionSearch"></section>
+  <section id="regionResults"></section>
+  <section id="regionAnalysis"></section>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="js/api.js"></script>
+<script src="js/links.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/metasearch.js"></script>
+<script src="js/modules/impact.js"></script>
+<script src="js/modules/permissions.js"></script>
+<script src="js/modules/flowdocs.js"></script>
+<script src="js/modules/execution.js"></script>
+<script src="js/modules/sharing.js"></script>
+<script src="js/modules/configuration.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
